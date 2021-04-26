@@ -1,0 +1,3 @@
+# Accepted
+
+print("Hello World!")
