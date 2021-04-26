@@ -1,3 +1,5 @@
+# Accepted
+
 name = input()
 base_salary = float(input())
 total_sales = float(input())
