@@ -1,7 +1,5 @@
 # https://www.hackerrank.com/challenges/designer-door-mat
 
-# Wrong 
-
 n, m = input().split()
 n, m = int(n), int(m)
 
@@ -15,8 +13,6 @@ for i in range (int((n-1)/2)):
     print(tracos + ponto_barra_ponto*(i*2+1) + tracos)
         
 print(traco * int((largura - 7)/2) + 'WELCOME' + traco * int((largura - 7)/2))
-
-# (m - 7)/2
 
 for j in reversed(range (int((n-1)/2))):
     m = m + 6
