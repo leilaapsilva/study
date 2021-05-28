@@ -117,3 +117,28 @@ WHERE p.salary > (SELECT p1.salary
                   WHERE f.id = s.id); 
 ~~~
 
+[Weather Observation Station 9](https://www.hackerrank.com/challenges/weather-observation-station-9) 
+
+~~~sql
+SELECT city FROM station 
+WHERE city not like "a%"
+AND city not like "e%"
+AND city not like "i%"
+AND city not like "o%"
+AND city not like "u%"
+GROUP BY city
+ORDER BY city;
+~~~
+
+[Weather Observation Station 10](https://www.hackerrank.com/challenges/weather-observation-station-10) 
+
+~~~sql
+SELECT city FROM station 
+WHERE city not like "%a"
+AND city not like "%e"
+AND city not like "%i"
+AND city not like "%o"
+AND city not like "%u"
+GROUP BY city
+ORDER BY city;
+~~~
