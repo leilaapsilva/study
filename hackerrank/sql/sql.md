@@ -142,3 +142,107 @@ AND city not like "%u"
 GROUP BY city
 ORDER BY city;
 ~~~
+
+[Revising Aggregations](https://www.hackerrank.com/challenges/revising-aggregations-the-count-function)
+
+~~~sql
+SELECT count(id)
+FROM city
+WHERE population > 100000;
+~~~
+
+[Revising Aggregations - Sum](https://www.hackerrank.com/challenges/revising-aggregations-sum)
+
+~~~sql
+SELECT sum(population)
+FROM CITY
+WHERE district = 'California';
+~~~
+
+[Average Population](https://www.hackerrank.com/challenges/average-population)
+
+~~~sql
+SELECT round(avg(population))
+FROM city;
+~~~
+
+[Japan Population](https://www.hackerrank.com/challenges/japan-population)
+
+~~~sql
+SELECT sum(population)
+FROM city
+WHERE countrycode = 'JPN';
+~~~
+
+[Population Density](https://www.hackerrank.com/challenges/population-density-difference)
+
+~~~sql
+SELECT max(population)-min(population)
+FROM city;
+~~~
+
+[The Blunder](https://www.hackerrank.com/challenges/the-blunder)
+
+~~~sql
+SELECT ceil(avg(salary) - avg(replace(salary, '0', '')))
+FROM employees;
+~~~
+
+
+[Top Earners](https://www.hackerrank.com/challenges/earnings-of-employees)
+
+~~~sql
+SELECT salary * months as earnings, count(*)
+FROM employee
+GROUP BY earnings
+ORDER BY earnings DESC
+LIMIT 1;
+~~~
+
+[Weather Observation Station 2](https://www.hackerrank.com/challenges/weather-observation-station-2/)
+
+~~~sql
+SELECT round(sum(LAT_N), 2), round(sum(LONG_W), 2)
+FROM station;
+~~~
+
+[Weather Observation Station 13](https://www.hackerrank.com/challenges/weather-observation-station-13)
+
+~~~sql
+SELECT round(sum(LAT_N), 4)
+FROM station
+WHERE (LAT_N > 38.7880) AND (LAT_N < 137.2345);
+~~~
+
+[Weather Observation Station 14](https://www.hackerrank.com/challenges/weather-observation-station-14)
+
+~~~sql
+SELECT round(max(LAT_N), 4)
+FROM station
+WHERE LAT_N < 137.2345;
+~~~
+
+[Population Census](https://www.hackerrank.com/challenges/asian-population)
+
+~~~sql
+SELECT sum(city.population)
+FROM city
+INNER JOIN country
+ON city.countrycode = country.code
+WHERE country.continent = 'Asia';
+~~~
+
+[Type of triangle](https://www.hackerrank.com/challenges/what-type-of-triangle)
+
+~~~sql
+SELECT CASE 
+    WHEN (a+b > c) AND (a+c > b) AND (b+c > a) THEN
+    CASE
+        WHEN a = b AND b = c THEN 'Equilateral'
+        WHEN a = b  OR a = c OR b = c THEN 'Isosceles'
+        ELSE 'Scalene'
+    END
+    ELSE 'Not A Triangle'
+END
+FROM triangles;
+~~~
