@@ -246,3 +246,53 @@ SELECT CASE
 END
 FROM triangles;
 ~~~
+
+[Revising Aggregations - Averages](https://www.hackerrank.com/challenges/revising-aggregations-the-average-function)
+
+~~~sql
+SELECT avg(population)
+FROM city
+WHERE district = 'California';
+~~~
+
+[Weather Observation Station 15](https://www.hackerrank.com/challenges/weather-observation-station-15)
+
+~~~sql
+SELECT round(long_w, 4)
+FROM station
+WHERE lat_n < 137.2345
+ORDER BY lat_n DESC
+LIMIT 1;
+~~~
+
+[Weather Observation Station 16](https://www.hackerrank.com/challenges/weather-observation-station-16)
+
+~~~sql
+SELECT round(lat_n, 4)
+FROM station
+WHERE lat_n > 38.7780
+ORDER BY lat_n
+LIMIT 1;
+~~~
+
+[Weather Observation Station 17](https://www.hackerrank.com/challenges/weather-observation-station-17)
+
+~~~sql
+SELECT round(long_w, 4)
+FROM station
+WHERE lat_n > 38.7780
+ORDER BY lat_n
+LIMIT 1;
+~~~
+
+[]()
+
+~~~sql
+
+~~~
+
+[]()
+
+~~~sql
+
+~~~
