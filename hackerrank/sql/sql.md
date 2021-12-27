@@ -285,6 +285,47 @@ ORDER BY lat_n
 LIMIT 1;
 ~~~
 
+[Weather Observation Station 11](https://www.hackerrank.com/challenges/weather-observation-station-11)
+
+~~~sql
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY REGEXP '^[^aeiou]|[^aeiou]$';
+~~~
+
+[Weather Observation Station 18](https://www.hackerrank.com/challenges/weather-observation-station-18/)
+
+~~~sql
+
+ERRADO
+
+SELECT ROUND(
+                 min(LAT_N) -
+                 max(LAT_N)
+             + 
+                min(LONG_W) -
+                max(LONG_W)
+        , 4)
+FROM station 
+
+--|x1 - x2| + |y1 - y2|
+-- x1 = min LAT_N
+-- x2 = min LONG_W
+-- y1 = nax LAT_N 
+-- y2 = max LONG_w
+~~~
+
+[]()
+
+~~~sql
+
+~~~
+
+[]()
+
+~~~sql
+
+~~~
+
 []()
 
 ~~~sql
